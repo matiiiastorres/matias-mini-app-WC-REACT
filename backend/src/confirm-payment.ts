@@ -21,7 +21,7 @@ export const confirmPaymentHandler: RequestHandler = async (req, res) => {
   // 1. Check that the transaction we received from the mini app is the same one we sent
   if (payload.reference === reference) {
     const response = await fetch(
-      `https://developer.worldcoin.org/api/v2/minikit/transaction/${payload.transaction_id}?app_id=${process.env.APP_ID}`,
+      `https://developer.worldcoin.org/api/v2/minikit/transaction/${payload.transaction_id}?app_id="app_6f9d7b35c03591b6965c6e47497a8bcd"; `,
       {
         method: "GET",
         headers: {

@@ -13,7 +13,7 @@ interface IRequestPayload {
 
 export const verifyHandler: RequestHandler = async (req, res) => {
   const { payload, action, signal } = req.body as IRequestPayload;
-  const app_id = process.env.APP_ID as `app_${string}`;
+  const app_id = "app_6f9d7b35c03591b6965c6e47497a8bcd"  as `app_${string}`;
   const verifyRes = (await verifyCloudProof(
     payload,
     app_id,
